@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Student Stress Prediction Survey</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+  body { background-color: #f0f4f8; }
+  .container { max-width: 600px; margin-top: 40px; }
+  h1 { margin-bottom: 30px; }
+  label { font-weight: 600; }
+  .form-text { font-size: 0.9rem; color: #666; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Student Stress Survey</h1>
+  <form action="/" method="post">
+
+    <div class="mb-3">
+      <label for="user_id" class="form-label">User ID</label>
+      <input id="user_id" name="user_id" type="text" class="form-control" required placeholder="Enter your User ID" />
+    </div>
+
+    <div class="mb-3">
+      <label for="feature1" class="form-label">Feature 1: Hours studied per day</label>
+      <input type="number" step="any" id="feature1" name="feature1" class="form-control" required placeholder="e.g. 5.5" />
+      <div class="form-text">Average hours focused on study per day.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature2" class="form-label">Feature 2: Days missed classes last month</label>
+      <input type="number" id="feature2" name="feature2" class="form-control" required placeholder="e.g. 3" />
+      <div class="form-text">Number of days you were absent in the last month.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature3" class="form-label">Feature 3: Average hours of sleep per night</label>
+      <input type="number" step="any" id="feature3" name="feature3" class="form-control" required placeholder="e.g. 7" />
+      <div class="form-text">How much you sleep nightly on average.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature4" class="form-label">Feature 4: Breaks during study sessions per day</label>
+      <input type="number" id="feature4" name="feature4" class="form-control" required placeholder="e.g. 2" />
+      <div class="form-text">How many breaks you take during study daily.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature5" class="form-label">Feature 5: Stress level about studies (1 to 5)</label>
+      <select id="feature5" name="feature5" class="form-select" required>
+        <option value="">Select stress level</option>
+        <option value="1">1 - Not stressed</option>
+        <option value="2">2 - Slightly stressed</option>
+        <option value="3">3 - Moderately stressed</option>
+        <option value="4">4 - Highly stressed</option>
+        <option value="5">5 - Extremely stressed</option>
+      </select>
+      <div class="form-text">Choose how stressed you typically feel.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature6" class="form-label">Feature 6: Late assignments last semester</label>
+      <input type="number" id="feature6" name="feature6" class="form-control" required placeholder="e.g. 1" />
+      <div class="form-text">Number of assignments submitted late.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature7" class="form-label">Feature 7: Weekly study group participation</label>
+      <input type="number" id="feature7" name="feature7" class="form-control" required placeholder="e.g. 2" />
+      <div class="form-text">Times per week you join study groups.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature8" class="form-label">Feature 8: Help requests (teachers/counselors)</label>
+      <input type="number" id="feature8" name="feature8" class="form-control" required placeholder="e.g. 1" />
+      <div class="form-text">How often you ask for help recently.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature9" class="form-label">Feature 9: Hours spent daily on leisure activities</label>
+      <input type="number" step="any" id="feature9" name="feature9" class="form-control" required placeholder="e.g. 3" />
+      <div class="form-text">Time spent daily on hobbies or non-study activities.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature10" class="form-label">Feature 10: Days exercising per week</label>
+      <input type="number" id="feature10" name="feature10" class="form-control" required placeholder="e.g. 4" />
+      <div class="form-text">Number of days you exercise weekly.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature11" class="form-label">Feature 11: Weekly lecture/tutorial attendance</label>
+      <input type="number" id="feature11" name="feature11" class="form-control" required placeholder="e.g. 5" />
+      <div class="form-text">Classes or tutorials attended per week.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature12" class="form-label">Feature 12: Quizzes and assessments on time</label>
+      <input type="number" id="feature12" name="feature12" class="form-control" required placeholder="e.g. 8" />
+      <div class="form-text">Number of quizzes completed punctual.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature13" class="form-label">Feature 13: Time spent on study devices daily (hours)</label>
+      <input type="number" step="any" id="feature13" name="feature13" class="form-control" required placeholder="e.g. 3.5" />
+      <div class="form-text">Hours using computer or phone for study daily.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature14" class="form-label">Feature 14: Study-related notifications checked daily</label>
+      <input type="number" id="feature14" name="feature14" class="form-control" required placeholder="e.g. 15" />
+      <div class="form-text">Notifications from apps or study platforms daily.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="feature15" class="form-label">Feature 15: Days feeling overwhelmed by coursework (last week)</label>
+      <input type="number" id="feature15" name="feature15" class="form-control" required placeholder="e.g. 2" />
+      <div class="form-text">Days last week you felt coursework stress strongly.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3 w-100">Predict Stress Level</button>
+  </form>
+</div>
+</body>
+</html>
